@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const API_URL = import.meta.env.VITE_API_URL;
 console.log("API_URL:", API_URL);
 
+
 export default function Dashboard() {
   const [sweets, setSweets] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
