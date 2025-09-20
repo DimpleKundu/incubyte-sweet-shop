@@ -2,16 +2,27 @@
 
 *By Dimple Kundu*
 
-A full-stack Sweet Shop Management System built with FastAPI (Python) and React, following Test-Driven Development (TDD) principles. This application helps manage inventory, track sales, and handle user authentication for a sweet shop business.
+A full-stack Sweet Shop Management System built with FastAPI (Python) and React (Vite), following strict Test-Driven Development (TDD) principles. This application is developed as part of the Incubyte TDD Kata, focusing on clean architecture, comprehensive testing, and modern development practices.
+
+## 🎯 Project Overview
+
+This project implements a complete Sweet Shop Management System as per the Incubyte TDD Kata requirements. The application follows a clean architecture with clear separation of concerns and comprehensive test coverage.
 
 ## 🚀 Features
 
-- **User Authentication**: Secure registration and login with JWT
-- **Sweet Management**: Add, view, update, and delete sweets
-- **Inventory Control**: Track and manage stock levels
-- **Search & Filter**: Find sweets by name, category, or price range
-- **Responsive Design**: Works on both desktop and mobile devices
-- **Role-Based Access**: Different permissions for admins and regular users
+### Backend (FastAPI)
+- **RESTful API**: Fully documented endpoints following OpenAPI specification
+- **JWT Authentication**: Secure token-based authentication
+- **Database Operations**: CRUD operations for sweets and inventory management
+- **Input Validation**: Request validation using Pydantic models
+- **Testing**: Comprehensive test suite with pytest
+
+### Frontend (React + Vite)
+- **User Authentication**: Registration and login forms with form validation
+- **Sweet Management**: Intuitive interface for managing sweet items
+- **Real-time Updates**: React Query for efficient data fetching and state management
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Role-based UI**: Different views for admin and regular users
 
 ## 🛠️ Tech Stack
 
@@ -32,21 +43,66 @@ A full-stack Sweet Shop Management System built with FastAPI (Python) and React,
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Backend (FastAPI)
 
-- Python 3.9+
-- Node.js 16+
-- PostgreSQL 13+
-- pip (Python package manager)
-- npm or yarn
+1. Navigate to the backend directory:
+   ```bash
+   cd sweet-shop-backend
+   ```
 
-### Project Structure
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate  # On Windows
+   # or
+   source .venv/bin/activate  # On macOS/Linux
+   ```
 
-```
-.
-├── sweet-shop-backend/     # FastAPI backend
-└── sweet-shop-frontend/    # React frontend
-```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Set up environment variables:
+   ```bash
+   # Create a .env file with your configuration
+   # Example:
+   DATABASE_URL=postgresql://user:password@localhost/sweet_shop
+   SECRET_KEY=your-secret-key
+   ALGORITHM=HS256
+   ACCESS_TOKEN_EXPIRE_MINUTES=30
+   ```
+
+5. Run database migrations:
+   ```bash
+   alembic upgrade head
+   ```
+
+6. Start the development server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+
+### Frontend (React + Vite)
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd sweet-shop-frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
 ## 🤖 My AI Usage
 
@@ -55,22 +111,43 @@ A full-stack Sweet Shop Management System built with FastAPI (Python) and React,
 - **ChatGPT**: For debugging assistance and code optimization
 - **GitHub Copilot Chat**: For explaining complex code and suggesting improvements
 
-### How I Used AI
-1. **Boilerplate Generation**: Used Copilot to quickly generate common code patterns and API endpoints
-2. **Test Writing**: Leveraged AI to create initial test cases which were then customized
-3. **Debugging**: Used ChatGPT to help identify and fix complex bugs
-4. **Code Optimization**: Got suggestions for improving performance and following best practices
+### How I Used AI in This Project
+1. **TDD Implementation**:
+   - Used AI to generate initial test cases following the Red-Green-Refactor cycle
+   - Leveraged Copilot to suggest test assertions and edge cases
+   - Example: Generated test stubs for all API endpoints before implementation
+
+2. **Backend Development**:
+   - Created FastAPI route handlers with proper request/response models
+   - Implemented JWT authentication with AI assistance
+   - Generated database models and migration scripts
+
+3. **Frontend Development**:
+   - Used AI to create React components following best practices
+   - Implemented form validation and error handling with AI suggestions
+   - Generated API client code for frontend-backend communication
+
+4. **Documentation**:
+   - Created comprehensive docstrings and API documentation
 
 ### Impact on Workflow
-AI tools significantly accelerated development by:
-- Reducing time spent on repetitive code
-- Helping identify edge cases in testing
-- Providing instant documentation and explanations
-- Suggesting more efficient algorithms and patterns
+AI tools significantly enhanced the development process by:
+- Accelerating the TDD cycle with faster test generation
+- Providing instant feedback on code quality and potential improvements
+- Reducing boilerplate code, allowing focus on business logic
+- Suggesting optimizations for both frontend and backend code
+- Helping identify and fix bugs more efficiently
 
-## 📝 License
+### Example AI-Assisted Commit
+```
+feat: Implement JWT authentication
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Added user registration and login endpoints
+- Implemented token generation and validation
+- Added protected routes with role-based access control
+
+Co-authored-by: GitHub Copilot <copilot@github.com>
+```
 
 ## 🙏 Acknowledgments
 
