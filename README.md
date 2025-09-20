@@ -1,6 +1,7 @@
 # 🍬 Sweet Shop Management System
 
 *By Dimple Kundu*
+## Deployment on Render: https://incubyte-sweet-shop-1.onrender.com/
 
 A full-stack Sweet Shop Management System built with FastAPI (Python) and React (Vite), following strict Test-Driven Development (TDD) principles. This application is developed as part of the Incubyte TDD Kata, focusing on clean architecture, comprehensive testing, and modern development practices.
 
