@@ -153,4 +153,4 @@ Co-authored-by: GitHub Copilot <copilot@github.com>
 
 - FastAPI for the amazing backend framework
 - React for the frontend library
-- All open-source contributors whose work made this project possible
+- All LLM i used and Youtube tutorial contributors whose work made this project possible
