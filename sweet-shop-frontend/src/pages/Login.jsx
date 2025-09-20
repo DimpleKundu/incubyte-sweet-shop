@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/auth/login",
+        `${API_URL}/auth/login`,
         { email: username, password },
         { headers: { "Content-Type": "application/json" } }
       );

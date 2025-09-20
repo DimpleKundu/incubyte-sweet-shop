@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_API_URL;
+console.log("API_URL:", API_URL);
+
 export default function Dashboard() {
   const [sweets, setSweets] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,13 +21,13 @@ export default function Dashboard() {
 
       try {
         // Fetch sweets
-        const sweetsRes = await axios.get("http://127.0.0.1:8000/api/sweets", {
+        const sweetsRes = await axios.get(`${API_URL}/sweets`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSweets(Array.isArray(sweetsRes.data) ? sweetsRes.data : []);
 
         // Fetch current user info
-        const userRes = await axios.get("http://127.0.0.1:8000/api/users/me", {
+        const userRes = await axios.get(`${API_URL}/users/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setIsAdmin(userRes.data.is_admin);
@@ -46,7 +49,7 @@ export default function Dashboard() {
 
     try {
       await axios.post(
-        `http://127.0.0.1:8000/api/inventory/${id}/purchase`,
+        `${API_URL}/inventory/${id}/purchase`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -63,7 +66,7 @@ export default function Dashboard() {
   const handleDelete = async (id) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/sweets/${id}`, {
+      await axios.delete(`${API_URL}/sweets/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSweets((prev) => prev.filter((s) => s.id !== id));
@@ -76,7 +79,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
     try {
       await axios.post(
-        `http://127.0.0.1:8000/api/inventory/${id}/restock?amount=${amount}`,
+        `${API_URL}/inventory/${id}/restock?amount=${amount}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -95,7 +98,7 @@ export default function Dashboard() {
       if (sweet.id) {
         // Update
         const res = await axios.put(
-          `http://127.0.0.1:8000/api/sweets/${sweet.id}`,
+          `${API_URL}/sweets/${sweet.id}`,
           sweet,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -105,7 +108,7 @@ export default function Dashboard() {
       } else {
         // Add
         const res = await axios.post(
-          `http://127.0.0.1:8000/api/sweets`,
+          `${API_URL}/sweets`,
           sweet,
           { headers: { Authorization: `Bearer ${token}` } }
         );
