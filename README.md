@@ -107,9 +107,9 @@ This project implements a complete Sweet Shop Management System as per the Incub
 ## 🤖 My AI Usage
 
 ### Tools Used
-- **GitHub Copilot**: For code suggestions and boilerplate generation
-- **ChatGPT**: For debugging assistance and code optimization
-- **GitHub Copilot Chat**: For explaining complex code and suggesting improvements
+- **ChatGPT**: For code suggestions and boilerplate generation, debugging assistance and code optimization and explaining complex code and suggesting improvements
+- **Windsurf**: to solve bugs and quickfixes in time ChatGPT revolves around the same fixes again and again
+- **Gemini**: to rethink and verify the code given and change the chatgpt errroneous code
 
 ### How I Used AI in This Project
 1. **TDD Implementation**:
