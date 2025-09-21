@@ -20,16 +20,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Quick Links Section */}
-      <div className="quick-links">
-        <h2>Explore Our Shop</h2>
-        <nav>
-          <Link to="/dashboard" className="link-btn">Dashboard</Link>
-          <Link to="/register" className="link-btn">Register</Link>
-          <Link to="/login" className="link-btn">Login</Link>
-        </nav>
-        
-      </div>
       <div className="credit-badge">made by Dimple</div>
 
     </div>
