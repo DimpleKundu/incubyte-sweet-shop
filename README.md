@@ -1,161 +1,112 @@
 # 🍬 Sweet Shop Management System
 
 *By Dimple Kundu*
-## Deployment on Render: https://incubyte-sweet-shop-1.onrender.com/
+**Live Deployment:** [Render](https://incubyte-sweet-shop-1.onrender.com/)
 
-A full-stack Sweet Shop Management System built with FastAPI (Python) and React (Vite), following strict Test-Driven Development (TDD) principles. This application is developed as part of the Incubyte TDD Kata, focusing on clean architecture, comprehensive testing, and modern development practices.
+A full-stack Sweet Shop Management System built with **FastAPI (Python)** and **React (Vite)**, following strict **Test-Driven Development (TDD)** principles. This project was developed as part of the Incubyte TDD Kata, focusing on clean architecture, comprehensive testing, and modern development practices.
+
+---
 
 ## 🎯 Project Overview
 
-This project implements a complete Sweet Shop Management System as per the Incubyte TDD Kata requirements. The application follows a clean architecture with clear separation of concerns and comprehensive test coverage.
+This project implements a complete Sweet Shop Management System with clear separation of concerns and full test coverage. Users can browse and purchase sweets, while admins can manage inventory and sweet items.
+
+---
 
 ## 🚀 Features
 
 ### Backend (FastAPI)
-- **RESTful API**: Fully documented endpoints following OpenAPI specification
-- **JWT Authentication**: Secure token-based authentication
-- **Database Operations**: CRUD operations for sweets and inventory management
-- **Input Validation**: Request validation using Pydantic models
-- **Testing**: Comprehensive test suite with pytest
+
+* **RESTful API** with OpenAPI documentation
+* **JWT Authentication** for secure access
+* **CRUD operations** for sweets and inventory management
+* **Input Validation** using Pydantic
+* **Testing** with Pytest
 
 ### Frontend (React + Vite)
-- **User Authentication**: Registration and login forms with form validation
-- **Sweet Management**: Intuitive interface for managing sweet items
-- **Real-time Updates**: React Query for efficient data fetching and state management
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Role-based UI**: Different views for admin and regular users
+
+* **User Authentication**: Registration and login with validation
+* **Sweet Management**: Add, update, delete, and restock (admin only)
+* **Role-Based UI**: Admin vs regular user views
+* **Responsive Design**: Mobile-first approach using Tailwind CSS
+* **Real-Time Updates** using React Query
+
+---
 
 ## 🛠️ Tech Stack
 
-### Backend
-- **Framework**: FastAPI (Python 3.9+)
-- **Database**: PostgreSQL
-- **Authentication**: JWT (JSON Web Tokens)
-- **Testing**: Pytest
-- **Database ORM**: SQLAlchemy
-- **Migrations**: Alembic
+**Backend:** FastAPI, Python 3.9+, MongoDB Atlas, JWT, Pytest
+**Frontend:** React 18, Vite, Tailwind CSS, React Query, React Router, React Hook Form
 
-### Frontend
-- **Framework**: React 18
-- **State Management**: React Query
-- **Styling**: Tailwind CSS
-- **Form Handling**: React Hook Form
-- **Routing**: React Router
+---
 
 ## 🚀 Getting Started
 
-### Backend (FastAPI)
+You can run the project in **two ways**:
 
-1. Navigate to the backend directory:
-   ```bash
-   cd sweet-shop-backend
-   ```
+### 1️⃣ Running Locally
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\activate  # On Windows
-   # or
-   source .venv/bin/activate  # On macOS/Linux
-   ```
+#### Backend
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+cd sweet-shop-backend
+python -m venv .venv
+# Activate environment:
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # macOS/Linux
 
-4. Set up environment variables:
-   ```bash
-   # Create a .env file with your configuration
-   # Example:
-   DATABASE_URL=postgresql://user:password@localhost/sweet_shop
-   SECRET_KEY=your-secret-key
-   ALGORITHM=HS256
-   ACCESS_TOKEN_EXPIRE_MINUTES=30
-   ```
+pip install -r requirements.txt
 
-5. Run database migrations:
-   ```bash
-   alembic upgrade head
-   ```
+# Set up your .env file with MongoDB Atlas URI
+# Example:
+# MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/sweetshop?retryWrites=true&w=majority
+# SECRET_KEY=your-secret-key
+# ACCESS_TOKEN_EXPIRE_MINUTES=30
 
-6. Start the development server:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-
-### Frontend (React + Vite)
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd sweet-shop-frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-## 🤖 My AI Usage
-
-### Tools Used
-- **GitHub Copilot**: For code suggestions and boilerplate generation
-- **ChatGPT**: For debugging assistance and code optimization
-- **GitHub Copilot Chat**: For explaining complex code and suggesting improvements
-
-### How I Used AI in This Project
-1. **TDD Implementation**:
-   - Used AI to generate initial test cases following the Red-Green-Refactor cycle
-   - Leveraged Copilot to suggest test assertions and edge cases
-   - Example: Generated test stubs for all API endpoints before implementation
-
-2. **Backend Development**:
-   - Created FastAPI route handlers with proper request/response models
-   - Implemented JWT authentication with AI assistance
-   - Generated database models and migration scripts
-
-3. **Frontend Development**:
-   - Used AI to create React components following best practices
-   - Implemented form validation and error handling with AI suggestions
-   - Generated API client code for frontend-backend communication
-
-4. **Documentation**:
-   - Created comprehensive docstrings and API documentation
-
-### Impact on Workflow
-AI tools significantly enhanced the development process by:
-- Accelerating the TDD cycle with faster test generation
-- Providing instant feedback on code quality and potential improvements
-- Reducing boilerplate code, allowing focus on business logic
-- Suggesting optimizations for both frontend and backend code
-- Helping identify and fix bugs more efficiently
-
-### Example AI-Assisted Commit
-```
-feat: Implement JWT authentication
-
-- Added user registration and login endpoints
-- Implemented token generation and validation
-- Added protected routes with role-based access control
-
-Co-authored-by: GitHub Copilot <copilot@github.com>
+uvicorn app.main:app --reload
 ```
 
-## 📝 License
+#### Frontend
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```bash
+cd sweet-shop-frontend
+npm install
+npm run dev
+# Visit http://localhost:3000
+```
+
+---
+
+### 2️⃣ Running via Docker Container
+
+#### Prerequisites
+
+* Docker and Docker Compose installed
+* `.env` files for backend with MongoDB URI
+
+#### Start Containers
+
+```bash
+docker-compose up --build
+```
+
+* **Frontend:** [http://localhost:3000](http://localhost:3000)
+* **Backend:** [http://localhost:8000/docs](http://localhost:8000/docs)
+
+> MongoDB is still **hosted on Atlas**, not in the container. This ensures credentials are never exposed publicly.
+
+---
+
+## 🤖 AI Usage
+
+All project code (root to UI) was developed using **GPT-5**, with minimal use of GitHub Copilot for boilerplate in backend routing only.
+AI was used for debugging, optimization, and generating frontend logic, TDD test stubs, and documentation.
+
+
+---
 
 ## 🙏 Acknowledgments
 
-- FastAPI for the amazing backend framework
-- React for the frontend library
-- All open-source contributors whose work made this project possible
+* **FastAPI** for backend
+* **React** for frontend
+* Open-source contributors
