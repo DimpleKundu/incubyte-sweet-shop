@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🍬 Sweet Shop Management System
 
 *By Dimple Kundu*
