@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍬 Sweet Shop Management System
 
 *By Dimple Kundu*
@@ -8,6 +9,28 @@ A full-stack Sweet Shop Management System built with FastAPI (Python) and React 
 ## 🎯 Project Overview
 
 This project implements a complete Sweet Shop Management System as per the Incubyte TDD Kata requirements. The application follows a clean architecture with clear separation of concerns and comprehensive test coverage.
+## 🖼️ Screenshots
+
+1. **Main Landing Page**
+   
+   ![App.jsx](https://github.com/user-attachments/assets/8bd41d57-608e-4482-b281-9d1791e5fb7f)
+
+2. **Register Page**
+   
+   ![Register](https://github.com/user-attachments/assets/1b8c63e9-f9c4-41ef-bad5-b15619bbba82)
+
+3. **Login Page**
+   
+   ![Login](https://github.com/user-attachments/assets/3141f1b1-c577-48d9-914a-c77cbbf86975)
+
+4. **Non-Admin Dashboard**
+   
+   ![Dashboard User](https://github.com/user-attachments/assets/37724b28-501a-44af-a1a2-4c9b70947722)
+
+5. **Admin Dashboard**
+   
+   ![Admin Dashboard](https://github.com/user-attachments/assets/bc80995a-062c-4093-9fb4-6f817f5202e6)
+
 
 ## 🚀 Features
 
@@ -159,3 +182,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - FastAPI for the amazing backend framework
 - React for the frontend library
 - All open-source contributors whose work made this project possible
+=======
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+>>>>>>> 4a5b84c (feat: Add complete frontend pages (Dashboard, Login, Register) with UI logic and state management)
