@@ -52,7 +52,7 @@ This project implements a complete Sweet Shop Management System as per the Incub
 
 ### Backend
 - **Framework**: FastAPI (Python 3.9+)
-- **Database**: PostgreSQL
+- **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
 - **Testing**: Pytest
 - **Database ORM**: SQLAlchemy
