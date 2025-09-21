@@ -99,8 +99,8 @@ docker-compose up --build
 
 ## 🤖 AI Usage
 
-All project code (root to UI) was developed using **GPT-5**, with minimal use of GitHub Copilot for boilerplate in backend routing only.
-AI was used for debugging, optimization, and generating frontend logic, TDD test stubs, and documentation.
+The entire project—from backend to frontend UI—was primarily developed using **GPT-5**, with **Windsurf** assisting only in generating backend routing boilerplate.  
+AI was leveraged for debugging, code optimization, creating frontend logic, generating TDD test stubs, and writing comprehensive documentation.
 
 
 ---
