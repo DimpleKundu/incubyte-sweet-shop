@@ -304,3 +304,110 @@ body {
   background: #10b981;
   color: white;
 }
+/* Home Page */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fef3c7, #fce7f3);
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.shop-name {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin-bottom: 1rem;
+}
+
+.shop-tagline {
+  font-size: 1.3rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.register-btn {
+  background: #10b981;
+  color: white;
+}
+.register-btn:hover {
+  background: #059669;
+}
+
+.login-btn {
+  background: #3b82f6;
+  color: white;
+}
+.login-btn:hover {
+  background: #2563eb;
+}
+
+.quick-links h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #d946ef;
+}
+
+.quick-links nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: #f59e0b;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.link-btn:hover {
+  background: #d97706;
+}
+
+.credit-badge {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #374151;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: background 0.2s;
+}
+
+.credit-badge:hover {
+  background: rgba(255, 255, 255, 1);
+}
