@@ -1,42 +1,306 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Container for two-panel layouts */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left panel with gradient & cookie icon */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #fce7f3, #fef3c7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.auth-left .icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-left h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.auth-left p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.card {
-  padding: 2em;
+/* Right panel with form */
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
 
-.read-the-docs {
-  color: #888;
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.form-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 1rem;
+  background: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-box button:hover {
+  background: #db2777;
+}
+
+/* Dashboard sweets grid */
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.sweet-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.sweet-card:hover {
+  transform: translateY(-4px);
+}
+
+.sweet-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sweet-card p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.sweet-card button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sweet-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.logout-btn {
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.logout-btn:hover {
+  background: #dc2626;
+}
+/* ---------- DASHBOARD STYLING ---------- */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fdf6f9;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d946ef;
+}
+
+.logout-btn {
+  background: #f43f5e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out;
+}
+.logout-btn:hover {
+  background: #e11d48;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.add-btn:hover {
+  background: #059669;
+}
+
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.sweet-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.sweet-card:hover {
+  transform: translateY(-4px);
+}
+
+.sweet-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sweet-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.sweet-card p {
+  margin: 0.2rem 0;
+  color: #6b7280;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+.stock {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #059669;
+}
+
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.card-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease-in-out;
+}
+.card-actions button:hover {
+  opacity: 0.8;
+}
+
+.buy-btn {
+  background: #3b82f6;
+  color: white;
+}
+.edit-btn {
+  background: #facc15;
+  color: black;
+}
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+.restock-btn {
+  background: #10b981;
+  color: white;
 }
