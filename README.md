@@ -55,8 +55,6 @@ This project implements a complete Sweet Shop Management System as per the Incub
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
 - **Testing**: Pytest
-- **Database ORM**: SQLAlchemy
-- **Migrations**: Alembic
 
 ### Frontend
 - **Framework**: React 18
